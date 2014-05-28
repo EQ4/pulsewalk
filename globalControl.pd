@@ -1,0 +1,34 @@
+#N canvas 355 259 349 154 10;
+#X floatatom -24 51 6 0 1 0 pan: - globalInitPan;
+#X floatatom -24 -19 6 0 1e+07 0 samp: - globalInitSamps;
+#X floatatom -24 16 6 -2048 2047 0 amp: - globalInitAmp;
+#X obj -24 41 bng 8 250 50 0 \$0-learnPan \$0-nothing empty 17 7 0
+10 -228856 -1 -1;
+#X obj -24 6 bng 8 250 50 0 \$0-learnAmp \$0-nothing empty 17 7 0 10
+-228856 -1 -1;
+#X obj -24 -29 bng 8 250 50 0 \$0-learnSamps \$0-nothing empty 17 7
+0 10 -228856 -1 -1;
+#X floatatom 36 51 6 0 100 0 ± - globalJumpPan;
+#X floatatom 36 -19 6 0 100000 0 ± - globalJumpSamps;
+#X floatatom 36 16 6 0 2048 0 ± - globalJumpAmp;
+#X obj 36 -29 bng 8 250 50 0 \$0-learnSampsJump \$0-nothing empty 17
+7 0 10 -228856 -1 -1;
+#X obj 36 6 bng 8 250 50 0 \$0-learnAmpJump \$0-nothing empty 17 7
+0 10 -228856 -1 -1;
+#X obj 36 41 bng 8 250 50 0 \$0-learnPanJump \$0-nothing empty 17 7
+0 10 -228856 -1 -1;
+#X text -27 -47 INIT;
+#X obj 33 78 tgl 15 0 globalMonitor ----- monitor 20 8 0 10 -228856
+-1 -1 0 1;
+#X obj -52 78 bng 8 250 50 0 \$0-learnGo \$0-nothing empty 17 7 0 10
+-228856 -1 -1;
+#X obj -41 78 tgl 15 0 globalGo --- active 20 8 0 10 -228856 -1 -1
+0 1;
+#X obj 22 78 bng 8 250 50 0 \$0-learnMonitor \$0-nothing empty 17 7
+0 10 -228856 -1 -1;
+#X text 33 -47 MAX.STEP;
+#X obj 132 -36 loadbang;
+#X msg 132 -13 \; globalInitSamps 0 \; globalInitAmp 0 \; globalInitPan
+0.5 \; globalJumpSamps 10 \; globalJumpAmp 10 \; globalJumpPan 1 \;
+pd dsp 1;
+#X connect 18 0 19 0;

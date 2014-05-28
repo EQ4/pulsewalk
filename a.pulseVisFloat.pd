@@ -1,0 +1,11 @@
+#N canvas 24 330 296 172 10;
+#X obj 39 26 inlet~;
+#X obj 39 74 snapshot~;
+#X obj 49 48 r \$1-metro;
+#X obj 39 96 s \$1-\$2;
+#X obj 120 72 switch~;
+#X obj 120 48 r \$1-outSwitchMetro;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 5 0 4 0;
