@@ -1,4 +1,4 @@
-#N canvas 549 31 520 60 10;
+#N canvas 764 567 520 60 10;
 #X floatatom -104 15 6 0 1 0 pan: #0-inInitPan #0-outInitPan;
 #X floatatom -332 15 6 0 1e+07 0 samp: #0-inInitSamps #0-outInitSamps
 ;
@@ -46,7 +46,7 @@
 #X connect 2 0 0 0;
 #X connect 2 0 1 0;
 #X restore 12 178 pd pulse;
-#N canvas 257 257 314 270 amplitude 0;
+#N canvas 251 308 314 270 amplitude 0;
 #X obj 61 -11 inlet~;
 #X obj 10 10 samphold~;
 #X obj 10 -11 noise~;
@@ -59,7 +59,7 @@
 #X obj 10 198 /~ 2048;
 #X text 65 198 <-- 12 bit resolution (4096/2);
 #X obj 20 173 a.pulseVisInt \$0 visAmp;
-#X obj 10 147 mirrorWall~ -2048 2047;
+#X obj 10 146 mirrorWall~ -2048 2047;
 #X connect 0 0 1 1;
 #X connect 1 0 3 0;
 #X connect 1 0 4 0;
@@ -73,7 +73,7 @@
 #X connect 12 0 9 0;
 #X connect 12 0 11 0;
 #X restore 72 178 pd amplitude;
-#N canvas 0 22 384 291 pan 0;
+#N canvas 1 148 384 291 pan 0;
 #X obj 63 9 inlet~;
 #X obj 12 30 samphold~;
 #X obj 12 9 noise~;

@@ -1,4 +1,4 @@
-#N canvas 222 407 249 171 10;
+#N canvas 1277 486 249 171 10;
 #X floatatom -51 59 6 0 1 0 pan: #0-inInitPan #0-outInitPan;
 #X floatatom -51 -11 6 0 1e+07 0 samp: #0-inInitSamps #0-outInitSamps
 ;
@@ -36,7 +36,7 @@
 #X floatatom 101 59 6 0 0 0 - #0-visPanMax #0-nothing2;
 #X obj 70 91 bng 8 250 50 0 \$0-learnMonitor \$0-nothing empty 17 7
 0 10 -228856 -1 -1;
-#N canvas 363 22 696 752 patch 0;
+#N canvas 357 131 701 755 patch 0;
 #X obj 108 4 samplerate~;
 #X obj 108 44 /;
 #X msg 108 24 1 \$1;
